@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/rails/jquery-ujs#readme",
   "peerDependencies": {
-    "jquery": ">=1.8.0"
+    "jquery": ">=1.8.0",
+    "sweetalert": ">=2.1.0"
   }
 }
