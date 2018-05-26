@@ -110,7 +110,7 @@
           text: message,
           icon: 'warning',
           buttons: [rails.messages.cancel, rails.messages.ok],
-          dangerMode: true,
+          dangerMode: true
         })
         .then(function(answer) {
           return rails.resolveOrReject($.Deferred(), answer).promise();
