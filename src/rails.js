@@ -26,6 +26,12 @@
     var $document = $(document);
 
     $.rails = rails = {
+      messages: {
+        title: 'Are you sure?',
+        ok: 'OK',
+        cancel: 'Cancel'
+      },
+
       // Link elements bound by jquery-ujs
       linkClickSelector: 'a[data-confirm], a[data-method], a[data-remote]:not([disabled]), a[data-disable-with], a[data-disable]',
 
@@ -100,10 +106,10 @@
       // Default confirm dialog, may be overridden with custom confirm dialog in $.rails.confirm
       confirm: function(message) {
         return swal({
-          title: 'Are you sure?',
+          title: rails.messages.title,
           text: message,
           icon: 'warning',
-          buttons: true,
+          buttons: [rails.messages.cancel, rails.messages.ok],
           dangerMode: true,
         })
         .then(function(answer) {
